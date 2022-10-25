@@ -174,23 +174,6 @@
             <div class="divider divider-small mb-3 bg-highlight"></div>
         </div>
 
-        <div class="card card-style" style="min-height: 250px">
-            <div class="content">
-                <center>
-                    <h5>SCAN DISINI</h5>
-                </center>
-                <div class="divider divider-small mb-3 bg-highlight"></div>
-                <div class="d-flex mb-2" style="text-align: center;">
-                    <center>
-                        <div class="qrcode_display" style="text-align: center">
-                            <?php echo \QrCode::size(200)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
-                        </div>
-                    </center>
-                </div>            
-            </div>
-            <div class="divider divider-small mb-3 bg-highlight"></div>
-        </div>
-
         <?php date_default_timezone_set('Asia/Jakarta');
             $date = $peserta->tgllahir; 
         ?>
@@ -409,6 +392,22 @@
                 </table>
             </div>
             
+            <div class="card card-style" style="min-height: 250px">
+                <div class="content">
+                    <center>
+                        <h5>SCAN DISINI</h5>
+                    </center>
+                    <div class="divider divider-small mb-3 bg-highlight"></div>
+                    <div class="d-flex mb-2" style="text-align: center;">
+                        <center>
+                            <div class="qrcode_display" style="text-align: center">
+                                <?php echo \QrCode::size(200)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
+                            </div>
+                        </center>
+                    </div>            
+                </div>
+                <div class="divider divider-small mb-3 bg-highlight"></div>
+            </div>
            
         </div> 
         
