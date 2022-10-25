@@ -110,6 +110,7 @@
     }
 
     .qrcode_display {
+        position: absolute;
         left: 15%;
         bottom: 26%;
         z-index: 9999;
