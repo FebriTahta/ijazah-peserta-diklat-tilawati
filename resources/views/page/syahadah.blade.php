@@ -183,7 +183,7 @@
                 <input type="hidden" id="lembaga_id" value=" - ">
                 <p class="font-11 mt-n2 text-capitalize">Program Pelatihan {{$peserta->program->name}} </p>
                 <div class="image">
-                    @if ($peserta->pelatihan->keterangan == 'guru')
+                    @if ($peserta->pelatihan->keterangan == 'guru' || $peserta->pelatihan->keterangan == 'instruktur')
                     <img src="{{asset('s_guru.jpg')}}" style="max-width: 100%" alt="">
                     @elseif($peserta->pelatihan->keterangan == 'santri')
                     <img src="{{asset('s_santri.jpg')}}" style="max-width: 100%" alt="">
