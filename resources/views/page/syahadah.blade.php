@@ -112,10 +112,7 @@
     .qrcode_display {
         position: absolute;
         left: 15%;
-        bottom: 26%;
         z-index: 9999;
-        font-size: 18px;
-        width: 70%;
         margin-bottom: 1px;
     }
     </style>
