@@ -110,7 +110,9 @@
     }
 
     .qrcode_display {
-       
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     </style>
 
