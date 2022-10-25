@@ -328,67 +328,71 @@
                             </tr>
                         </thead>
                     @endif
-                   
-                    <tbody>
-                        @foreach ($peserta->nilai as $key=> $item)
-                        <tr>
-							@if ($item !== null)
-								@if ($item->kategori == 'skill')
-                                    <td scope="col" style="width: 90%">{{$item->penilaian->name}}</td>
-                                    <td scope="col" style="width: 10%">{{$item->nominal}}</td>
-                                @endif
+                </table>
+            </div>
+
+            <div class="content mb-1">
+                <table class="table table-borderless rounded-lg shadow-l" style="overflow: hidden; line-height: 11px">
+                <tbody>
+                    @foreach ($peserta->nilai as $key=> $item)
+                    <tr>
+                        @if ($item !== null)
+                            @if ($item->kategori == 'skill')
+                                <td scope="col" style="width: 90%">{{$item->penilaian->name}}</td>
+                                <td scope="col" style="width: 10%">{{$item->nominal}}</td>
                             @endif
-                        </tr>
-                        @endforeach
-                    </tbody>
-                    <thead class="text-uppercase" style="font-size: 12px">
-                        <tr style="background-color: rgb(94, 192, 151)">
-                            <th style="color: white" scope="col">Hasil Akhir</th>
-                            <th style="color: white" scope="col" ></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @if ($peserta->pelatihan->keterangan == 'guru')
-                        <tr>
-							<td scope="col" style="width: 90%">Rata - rata Nilai</td>
-                            <td scope="col" style="width: 10%" class="color-green1-dark">
-                                @if ($peserta->pelatihan->program->name=='munaqosyah santri')
-									{{ $rata2 = $jumlah }}
-								@elseif($peserta->program->name == 'Diklat Munaqisy Cabang')
-									@php
-										$x = $peserta->nilai->where("kategori","al-qur'an")->sum('nominal');
-										$y = $peserta->nilai->where("kategori","skill")->sum('nominal');
-										$z = $peserta->nilai->where("kategori","skill")->count();
-										$satu  = $x;
-										$dua   = round($y / $z);
-										$rata2 = round(($satu+$dua)/2);
-									@endphp
-									{{round($rata2)}}
-								@else
-									{{ $rata2 = round(($jumlah+ $item->nominal)/2) }}
-								@endif
-                            </td>
-                        </tr>
-                    @else
-                        <?php $rata2 = $jumlah ?>
-                        <tr>
-							<td scope="col" style="width: 90%">Rata - rata Nilai</td>
-                            <td scope="col" style="width: 10%" class="color-green1-dark">
-								{{ $rata2 = $jumlah }}
-                            </td>
-                        </tr>
-                    @endif
-                        <tr>
-                            <td scope="col" style="width: 90%">Predikat</td>
-                            <td scope="col" style="width: 10%" class="color-green1-dark">
-                                @if ($rata2 >= 85)
-									Baik
-								@else
-									Cukup
-								@endif
-                            </td>
-                        </tr>
-                    </tbody>
+                        @endif
+                    </tr>
+                    @endforeach
+                </tbody>
+                <thead class="text-uppercase" style="font-size: 12px">
+                    <tr style="background-color: rgb(94, 192, 151)">
+                        <th style="color: white" scope="col">Hasil Akhir</th>
+                        <th style="color: white" scope="col" ></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if ($peserta->pelatihan->keterangan == 'guru')
+                    <tr>
+                        <td scope="col" style="width: 90%">Rata - rata Nilai</td>
+                        <td scope="col" style="width: 10%" class="color-green1-dark">
+                            @if ($peserta->pelatihan->program->name=='munaqosyah santri')
+                                {{ $rata2 = $jumlah }}
+                            @elseif($peserta->program->name == 'Diklat Munaqisy Cabang')
+                                @php
+                                    $x = $peserta->nilai->where("kategori","al-qur'an")->sum('nominal');
+                                    $y = $peserta->nilai->where("kategori","skill")->sum('nominal');
+                                    $z = $peserta->nilai->where("kategori","skill")->count();
+                                    $satu  = $x;
+                                    $dua   = round($y / $z);
+                                    $rata2 = round(($satu+$dua)/2);
+                                @endphp
+                                {{round($rata2)}}
+                            @else
+                                {{ $rata2 = round(($jumlah+ $item->nominal)/2) }}
+                            @endif
+                        </td>
+                    </tr>
+                @else
+                    <?php $rata2 = $jumlah ?>
+                    <tr>
+                        <td scope="col" style="width: 90%">Rata - rata Nilai</td>
+                        <td scope="col" style="width: 10%" class="color-green1-dark">
+                            {{ $rata2 = $jumlah }}
+                        </td>
+                    </tr>
+                @endif
+                    <tr>
+                        <td scope="col" style="width: 90%">Predikat</td>
+                        <td scope="col" style="width: 10%" class="color-green1-dark">
+                            @if ($rata2 >= 85)
+                                Baik
+                            @else
+                                Cukup
+                            @endif
+                        </td>
+                    </tr>
+                </tbody>
                 </table>
             </div>
         </div> 
