@@ -279,7 +279,7 @@
                     
                 </div>
                 <div class="float-left" style="font-size: 12px">
-                    <p class="font-10 opacity-80 mb-n1"><i class="far fa-calendar"></i> {{(\Carbon\Carbon::parse($peserta->pelatihan->tanggal)->format('d F Y'))}} 
+                    <p class="font-10 opacity-80 mb-n1" style="text-transform: uppercase"><i class="far fa-calendar"></i> {{(\Carbon\Carbon::parse($peserta->pelatihan->tanggal)->format('d F Y'))}} 
                     <p class="font-10 opacity-80"><i class="fa fa-map-marker-alt"></i> {{$peserta->pelatihan->tempat}} </p>
                 </div>
                 @auth
