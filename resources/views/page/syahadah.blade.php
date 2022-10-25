@@ -157,13 +157,27 @@
                     <div>
                         <h5 class="font-16 font-600">SYAHADAH RESMI</h5>
                         <p style="line-height: 17px; font-size: 11px">
-                           Standar sertifikasi metode pembelajaran Tilawati  <b> {{$peserta->kriteria}}</b>
+                           Standar sertifikasi metode pembelajaran Tilawati  <br><b> {{$peserta->kriteria}}</b>
                         </p>
                     </div>
                 </div>            
             </div>
             <div class="divider divider-small mb-3 bg-highlight"></div>
         </div>
+
+        <div class="card card-style">
+            <div class="content">
+                <div class="d-flex mb-2">
+                    <center>
+                        <div class="qrcode" style="max-width: 70%">
+                            <?php echo \QrCode::size(30)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
+                        </div>
+                    </center>
+                </div>            
+            </div>
+            <div class="divider divider-small mb-3 bg-highlight"></div>
+        </div>
+
         <?php date_default_timezone_set('Asia/Jakarta');
             $date = $peserta->tgllahir; 
         ?>
