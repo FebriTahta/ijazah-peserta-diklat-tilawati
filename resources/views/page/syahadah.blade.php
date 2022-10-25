@@ -110,8 +110,7 @@
     }
 
     .qrcode_display {
-        position: absolute;
-        width: 70%;
+       
     }
     </style>
 
