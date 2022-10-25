@@ -108,6 +108,11 @@
         width: 70%;
         margin-bottom: 1px;
     }
+
+    .qrcode_display {
+        position: absolute;
+        width: 70%;
+    }
     </style>
 
 </head>
@@ -169,7 +174,7 @@
             <div class="content">
                 <div class="d-flex mb-2">
                     <center>
-                        <div class="qrcode" style="max-width: 70%">
+                        <div class="qrcode_display">
                             <?php echo \QrCode::size(30)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
                         </div>
                     </center>
