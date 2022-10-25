@@ -174,7 +174,7 @@
                 <div class="d-flex mb-2">
                     <center>
                         <div class="qrcode_display">
-                            <?php echo \QrCode::size(30)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
+                            <?php echo \QrCode::size(300)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
                         </div>
                     </center>
                 </div>            
