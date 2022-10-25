@@ -196,18 +196,18 @@
                     <table class="tables" style="margin-left: 11px; font-size:5px; top:48%">
                     @endif
                    
-                        <tr>
+                        <tr style="font-weight:bold">
                             <td style="width: 25%">Nama</td>
                             <td style="width: 2%">:</td>
                             <td style="font-weight:bold"> {{$peserta->name}} </td>
                         </tr>
-                        <tr>
+                        <tr style="font-weight:bold">
                             <td style="width: 25%">Alamat</td>
                             <td style="width: 2%">:</td>
                             <td style="width: 75%; font-weight:bold"> {{$peserta->alamat}} 
                             </td>
                         </tr>
-                        <tr>
+                        <tr style="font-weight:bold">
                             <td style="width: 25%">Tempat Tanggal Lahir</td>
                             <td style="width: 2%">:</td>
                             <td style="width: 75%; font-weight:bold"> 
@@ -218,7 +218,7 @@
                                 @endif 
                             </td>
                         </tr>
-                        <tr>
+                        <tr style="font-weight:bold">
                             <td style="width: 25%">Dinyatakan</td>
                             <td style="width: 2%">:</td>
                             <td style="width: 75%; font-weight:bold"> {{$peserta->kriteria}} 
