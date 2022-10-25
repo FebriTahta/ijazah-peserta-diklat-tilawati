@@ -393,7 +393,7 @@
             </div>
         </div> 
 
-        <div class="card card-style" style="min-height: 250px">
+        <div class="card card-style" style="min-height: 300px">
             <div class="content">
                 <center>
                     <h5>SCAN DISINI</h5>
