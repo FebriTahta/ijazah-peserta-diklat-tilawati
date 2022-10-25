@@ -110,7 +110,7 @@
     }
 
     .qrcode_display {
-        position: fixed;
+        position: absolute;
         left: 15%;
         /* bottom: 26%; */
         z-index: 9999;
@@ -174,9 +174,9 @@
             <div class="divider divider-small mb-3 bg-highlight"></div>
         </div>
 
-        <div class="card card-style">
+        <div class="card card-style" style="min-height: 300px">
             <div class="content">
-                <div class="d-flex mb-2" style="text-align: center">
+                <div class="d-flex mb-2" style="text-align: center;">
                     <center>
                         <div class="qrcode_display" style="text-align: center">
                             <?php echo \QrCode::size(200)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
