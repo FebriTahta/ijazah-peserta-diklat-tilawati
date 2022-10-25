@@ -5,7 +5,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>Azures BootStrap</title>
+<title>{{$peserta->name}}</title>
 <link rel="stylesheet" type="text/css" href="{{asset('mobile_asset/styles/bootstrap.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('mobile_asset/styles/style.css')}}">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
@@ -272,7 +272,9 @@
                     <p class="font-10 opacity-80 mb-n1"><i class="far fa-calendar"></i> {{(\Carbon\Carbon::parse($peserta->pelatihan->tanggal)->format('d F Y'))}} 
                     <p class="font-10 opacity-80"><i class="fa fa-map-marker-alt"></i> {{$peserta->pelatihan->tempat}} </p>
                 </div>
+                @auth
                 <a href="#" id="download_sertifikat" class="float-right btn btn-s bg-highlight rounded-s shadow-xl text-uppercase font-900 font-11 mt-2"><i class="fa fa-download"></i></a>
+                @endauth
             </div>
         </div>
     
