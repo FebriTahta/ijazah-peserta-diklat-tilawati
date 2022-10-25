@@ -171,9 +171,9 @@
 
         <div class="card card-style">
             <div class="content">
-                <div class="d-flex mb-2">
+                <div class="d-flex mb-2" style="text-align: center">
                     <center>
-                        <div class="qrcode_display">
+                        <div class="qrcode_display" style="text-align: center">
                             <?php echo \QrCode::size(200)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
                         </div>
                     </center>
