@@ -191,9 +191,9 @@
                 </div>
                 <div class="isi-sertifikat">
                     @if ($peserta->pelatihan->keterangan == 'guru')
-                    <table class="tables" style="margin-left: 11px; font-size:4px; top:46%">
+                    <table class="tables" style="margin-left: 11px; font-size:5px; top:46%">
                     @else
-                    <table class="tables" style="margin-left: 11px; font-size:4px; top:48%">
+                    <table class="tables" style="margin-left: 11px; font-size:5px; top:48%">
                     @endif
                    
                         <tr>
