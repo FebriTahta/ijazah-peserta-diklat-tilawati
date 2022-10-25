@@ -111,6 +111,7 @@
 
     .qrcode_display {
         display: block;
+        position: absolute;
         margin-left: auto;
         margin-right: auto;
     }
