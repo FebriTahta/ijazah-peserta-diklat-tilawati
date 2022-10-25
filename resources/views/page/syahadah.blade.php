@@ -174,7 +174,7 @@
             <div class="divider divider-small mb-3 bg-highlight"></div>
         </div>
 
-        <div class="card card-style" style="min-height: 300px">
+        <div class="card card-style" style="min-height: 250px">
             <div class="content">
                 <div class="d-flex mb-2" style="text-align: center;">
                     <center>
