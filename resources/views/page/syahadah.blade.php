@@ -48,7 +48,7 @@
         /* top: 48%; */
         left: 12%;
         z-index: 9999;
-        font-size: 3px;
+        font-size: 2px;
         width: 70%;
         position: absolute;
         line-height: 7px;
