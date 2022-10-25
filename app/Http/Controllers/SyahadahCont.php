@@ -14,11 +14,10 @@ class SyahadahCont extends Controller
     {
         $id =  Crypt::decrypt($pelatihan_id);
         $diklat = Pelatihan::findOrFail($id);
-
         
         if ($request->ajax()) {
             # code...
-            $data   = Peserta::where('pelatihan_id',$id)
+            $data   = Peserta::where('pelatihan_id',$id)->where('bersyahadah','1')
             ->orderBy('id','asc')->get();
                 return DataTables::of($data)
                 ->addColumn('download',function($data){

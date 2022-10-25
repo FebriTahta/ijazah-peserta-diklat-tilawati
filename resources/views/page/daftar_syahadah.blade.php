@@ -44,7 +44,7 @@
                 <div class="title">E Syahadah</div>
                 <?php date_default_timezone_set('Asia/Jakarta');?>
                 <h2 class="text-capitalize">{{ $diklat->program->name }}</h2>
-                <p>( {{ \Carbon\Carbon::parse($diklat->tanggal)->format('l, d F Y') }} - {{ $diklat->peserta->count() }} {{$diklat->keterangan}}) </p>
+                <p>( {{ \Carbon\Carbon::parse($diklat->tanggal)->format('l, d F Y') }} - {{ $diklat->peserta->where('bersyahadah','1')->count() }} {{$diklat->keterangan}}) </p>
                 <div class="separate"></div>
             </div>
         </div>

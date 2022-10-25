@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>E-Certificate</title>
+<title>Syahadah Electronic</title>
 <!-- Stylesheets -->
 <link href="{{ asset('tilawatipusat/landing/css/bootstrap.css') }}" rel="stylesheet">
 <link href="{{ asset('tilawatipusat/landing/css/style.css') }}" rel="stylesheet">
