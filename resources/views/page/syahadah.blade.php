@@ -182,7 +182,9 @@
                 <h3 class="font-600"> {{$peserta->name}} </h3>
                 <input type="hidden" id="lembaga_id" value=" - ">
                 <p class="font-11 mt-n2 text-capitalize">Program Pelatihan {{$peserta->program->name}} </p>
-                <a href="https://admin.nurulfalah.org/cetak-syahadah-depan-belakang-b5/{{$peserta->id}}" class="btn btn-outline-primary">UNDUH</a>
+                <div style="margin-top: 20px">
+                    <a href="https://admin.nurulfalah.org/cetak-syahadah-depan-belakang-b5/{{$peserta->id}}" class="btn btn-sm btn-outline-primary">UNDUH</a>
+                </div>
                 {{-- <div class="image">
                     @if ($peserta->pelatihan->keterangan == 'guru' || $peserta->pelatihan->keterangan == 'instruktur')
                     <img src="{{asset('s_guru.jpg')}}" style="max-width: 100%" alt="">
