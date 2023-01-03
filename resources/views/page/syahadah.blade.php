@@ -183,7 +183,7 @@
                 <input type="hidden" id="lembaga_id" value=" - ">
                 <p class="font-11 mt-n2 text-capitalize">Program Pelatihan {{$peserta->program->name}} </p>
                 <div style="margin-top: 20px">
-                    <a href="https://admin.nurulfalah.org/cetak-syahadah-depan-belakang-b5/{{$peserta->id}}" class="btn btn-sm btn-outline-primary">UNDUH</a>
+                    <u><a href="https://admin.nurulfalah.org/cetak-syahadah-depan-belakang-b5/{{$peserta->id}}" >Unduh E Syahadah Anda Disini</a></u>
                 </div>
                 {{-- <div class="image">
                     @if ($peserta->pelatihan->keterangan == 'guru' || $peserta->pelatihan->keterangan == 'instruktur')
