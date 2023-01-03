@@ -182,14 +182,15 @@
                 <h3 class="font-600"> {{$peserta->name}} </h3>
                 <input type="hidden" id="lembaga_id" value=" - ">
                 <p class="font-11 mt-n2 text-capitalize">Program Pelatihan {{$peserta->program->name}} </p>
-                <div class="image">
+                <a href="https://admin.nurulfalah.org/cetak-syahadah-depan-belakang-b5/{{$peserta->id}}" class="btn btn-outline-primary">UNDUH</a>
+                {{-- <div class="image">
                     @if ($peserta->pelatihan->keterangan == 'guru' || $peserta->pelatihan->keterangan == 'instruktur')
                     <img src="{{asset('s_guru.jpg')}}" style="max-width: 100%" alt="">
                     @elseif($peserta->pelatihan->keterangan == 'santri')
                     <img src="{{asset('s_santri.jpg')}}" style="max-width: 100%" alt="">
                     @endif
-                </div>
-                <div class="isi-sertifikat">
+                </div> --}}
+                {{-- <div class="isi-sertifikat">
                     @if ($peserta->pelatihan->keterangan == 'guru')
                     <table class="tables" style="margin-left: 11px; font-size:5px; top:48%">
                     @else
@@ -227,7 +228,9 @@
                     </table>
 
                     <div class="qrcode">
-                        <?php echo \QrCode::size(30)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id) ?>
+                        @php
+                            echo \QrCode::size(30)->generate('https://syahadah.nurulfalah.org/syahadah-peserta/'.$peserta_id)
+                        @endphp
                     </div>
                     <div class="no_sertifikat" style="font-weight: bold"><u> No. Syahadah : {{$peserta->pelatihan_id}}/{{\Carbon\Carbon::parse($peserta->pelatihan->tanggal)->format('Y')}}/{{$peserta->id}} </u></div>
                     <div class="tanggalan" style="margin-left: 10px">Surabaya, {{\Carbon\Carbon::parse($peserta->pelatihan->tanggal)->format('d F Y')}} </div>
@@ -279,7 +282,7 @@
                         @endif
                     @endif
                     
-                </div>
+                </div> --}}
                 <div class="float-left" style="font-size: 12px">
                     <p class="font-10 opacity-80 mb-n1" style="text-transform: uppercase"><i class="far fa-calendar"></i> {{(\Carbon\Carbon::parse($peserta->pelatihan->tanggal)->format('d F Y'))}} 
                     <p class="font-10 opacity-80"><i class="fa fa-map-marker-alt"></i> {{$peserta->pelatihan->tempat}} </p>
