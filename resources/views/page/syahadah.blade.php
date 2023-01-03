@@ -244,11 +244,13 @@
                         @if ($peserta->pelatihan->cabang->name == 'Cahaya Amanah' || $peserta->pelatihan->cabang->name == 'Tilawati Pusat' || $peserta->pelatihan->cabang->status == "RPQ")
                         <div class="kacab">Direktur Eksekutif</div>
                         @else
-                            <?	$kabupaten 	= substr($peserta->pelatihan->cabang->kabupaten->nama, 5); $kab = strtolower($kabupaten);
+                            @php
+                                $kabupaten 	= substr($peserta->pelatihan->cabang->kabupaten->nama, 5); $kab = strtolower($kabupaten);
                                 $provinsi 	= strtolower($peserta->pelatihan->cabang->kabupaten->provinsi->nama); 
                                 $data_kabupaten = App\Models\Kabupaten::where('id', $peserta->pelatihan->cabang->kabupaten->id)->first();
                                 $jum_cabang		= $data_kabupaten->cabang->count();
-                            ?>
+                            @endphp
+                            
                             @if ($jum_cabang > 1)
                                 @if (substr($peserta->pelatihan->cabang->kabupaten->nama, 5, 3) == 'ADM')
                                     <div class="kacab"> {{ 'Kacab. ' . strtoupper(substr($provinsi, 0, 3)) . ' ' . ucfirst(substr($provinsi, 4)) }}</div>
